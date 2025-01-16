@@ -1,0 +1,112 @@
+/*================================================= 
+-- Template Styles
+=================================================*/
+
+/* Flex Box */
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-flex-start {
+    align-items: flex-start;
+}
+
+.align-flex-end {
+    align-items: flex-end;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.align-start {
+    align-items: start;
+}
+
+.align-end {
+    align-items: end;
+}
+
+
+/* Grid */
+
+.grid {
+    display: grid;
+}
+
+.grid-col-1 {
+    grid-template-columns: 1fr;
+}
+
+.grid-col-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-col-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-col-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-col-6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-col-7 {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-col-8 {
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.grid-col-1fr-2fr {
+    grid-template-columns: 1fr 2fr;
+}
+
+.grid-col-1fr-2fr-3fr {
+    grid-template-columns: 1fr 2fr 3fr;
+}
+
+.grid-col-5fr-2fr {
+    grid-template-columns: 5fr 2fr;
+}
+
+.grid-col-3fr-2fr {
+    grid-template-columns: 3fr 2fr;
+}

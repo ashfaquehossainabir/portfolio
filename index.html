@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- JQuery Source -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+
+    <!-- CSS Source -->
+    <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="stylesheet" href="./css/preloader.css"/>
+</head>
+<body class="light-theme">
+    <!--====================================================
+    ---- Preloader
+    =====================================================-->
+
+    <div class="preloader" id="preloader">
+        <div>
+            <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+                <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+                <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+                <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+                <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            </svg>
+        </div>
+    </div>
+
+
+    <!--====================================================
+    ---- Header Section
+    =====================================================-->
+
+    <header>
+        <div class="container">
+            <nav>
+                <!-- Logo Image -->
+                <img class="logo-light" src="./images/logo-light.svg" alt="logo-light"/>
+                <img class="logo-dark" src="./images/logo-dark.svg" alt="logo-dark"/>
+
+                <div class="menu-section">
+                    <!-- Nav Menu -->
+                    <ul>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#blogs">blogs</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+
+                    <div class="nav-btn">
+                        <!-- Light/Dark Icon Button -->
+                        <button class="theme-btn">
+                            <img class="light-icon" src="./images/light-icon.svg" alt="light-icon">
+                            <img class="dark-icon" src="./images/dark-icon.svg" alt="dark-icon">
+                        </button>
+
+                        <!-- Nav Button -->
+                        <button class="project-btn">My Projects</button>
+                    </div>
+
+                    <!-- Mobile Nav Menu Button -->
+                    <button class="nav-menu-btn" onclick="navToggleFunc()">
+                        <!-- Bar Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mobile-nav-menu">
+            <!-- Close Icon -->
+            <button class="nav-close-btn" onclick="navToggleFunc()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/>
+                </svg>
+            </button>
+
+            <!-- Logo Image -->
+            <img class="logo-light" src="./images/logo-light.svg" alt="logo-light"/>
+            <img class="logo-dark" src="./images/logo-dark.svg" alt="logo-dark"/>
+
+            <!-- Menu List -->
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#services">services</a></li>
+                <li><a href="#blogs">blogs</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+
+            <!-- Light/Dark Icon Button -->
+            <div class="mobile-theme-btn">
+                <p>
+                    Switch Theme
+                </p>
+
+                <button class="theme-btn">
+                    <img class="light-icon" src="./images/light-icon.svg" alt="light-icon">
+                    <img class="dark-icon" src="./images/dark-icon.svg" alt="dark-icon">
+                </button>
+            </div>
+
+            <!-- Project Button -->
+            <button class="project-btn">My Projects</button>
+        </div>
+    </header>
+
+    <!--====================================================
+    ---- Hero Section
+    =====================================================-->
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="left">
+                <div class="mobile-hero-image">
+                    <!-- Hero Image -->
+                    <img src="./images/author-image.jpg" class="hero-image" alt="hero-image"/>
+
+                    <!-- Hero Image Shadow -->
+                    <svg width="280" height="320" viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="280" height="320" fill="#E5E7EB"/>
+                    </svg>
+                </div>
+
+                <div class="hero-contents">
+                    <h1>
+                        Hi, I’m Abir <span class="waving-hand">👋</span>
+                    </h1>
+                    <p>
+                        I'm a full stack developer (React.js & Node.js) with a focus on creating (and occasionally designing) 
+                        exceptional digital experiences that are fast, accessible, visually appealing, and responsive. 
+                        Even though I have been creating web applications for over 7 years, I still love it as if it was 
+                        something new.
+                    </p>
+                </div>
+    
+                <div class="hero-info">
+                    <div class="hero-location">
+                        <!-- Location Icon -->
+                        <img src="./images/location-icon.svg" alt="location-icon"/>
+    
+                        <p>
+                            Dhaka, Bangladesh
+                        </p>
+                    </div>
+
+                    <div class="hero-availability">
+                        <!-- Green Dot Icon Image -->
+                        <!-- <img src="./images/green-dot-icon.svg" class="green-dot-icon" alt="green-dot-icon"/> -->
+
+                        <!-- Green Dot Icon -->
+                        <div class="dot"></div>
+
+                        <p>
+                            Available for new projects
+                        </p>
+                    </div>
+
+                    <div class="hero-icons">
+                        <!-- Github Icon -->
+                        <a href="https://github.com/ashfaquehossainabir" target="_blank">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 28V24C21.1392 22.7473 20.78 21.4901 20 20.5C23 20.5 26 18.5 26 15C26.08 13.75 25.73 12.52 25 11.5C25.28 10.35 25.28 9.15 25 8C25 8 24 8 22 9.5C19.36 9 16.64 9 14 9.5C12 8 11 8 11 8C10.7 9.15 10.7 10.35 11 11.5C10.2719 12.5159 9.91851 13.7528 10 15C10 18.5 13 20.5 16 20.5C15.61 20.99 15.32 21.55 15.15 22.15C14.98 22.75 14.93 23.38 15 24V28" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 24C10.49 26 10 22 8 22" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+    
+                        <!-- Twitter Icon -->
+                        <a href="https://x.com/Ashfaquertc70" target="_blank">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M28 10C28 10 27.3 12.1 26 13.4C27.6 23.4 16.6 30.7 8 25C10.2 25.1 12.4 24.4 14 23C9 21.5 6.5 15.6 9 11C11.2 13.6 14.6 15.1 18 15C17.1 10.8 22 8.4 25 11.2C26.1 11.2 28 10 28 10Z" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+    
+                        <!-- Figma Icon -->
+                        <a href="https://www.figma.com/@ashfaquehossain" target="_blank">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 11.5C11 10.5717 11.3687 9.6815 12.0251 9.02513C12.6815 8.36875 13.5717 8 14.5 8H18V15H14.5C13.5717 15 12.6815 14.6313 12.0251 13.9749C11.3687 13.3185 11 12.4283 11 11.5Z" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18 8H21.5C21.9596 8 22.4148 8.09053 22.8394 8.26642C23.264 8.44231 23.6499 8.70012 23.9749 9.02513C24.2999 9.35013 24.5577 9.73597 24.7336 10.1606C24.9095 10.5852 25 11.0404 25 11.5C25 11.9596 24.9095 12.4148 24.7336 12.8394C24.5577 13.264 24.2999 13.6499 23.9749 13.9749C23.6499 14.2999 23.264 14.5577 22.8394 14.7336C22.4148 14.9095 21.9596 15 21.5 15H18V8Z" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18 18.5C18 18.0404 18.0905 17.5852 18.2664 17.1606C18.4423 16.736 18.7001 16.3501 19.0251 16.0251C19.3501 15.7001 19.736 15.4423 20.1606 15.2664C20.5852 15.0905 21.0404 15 21.5 15C21.9596 15 22.4148 15.0905 22.8394 15.2664C23.264 15.4423 23.6499 15.7001 23.9749 16.0251C24.2999 16.3501 24.5577 16.736 24.7336 17.1606C24.9095 17.5852 25 18.0404 25 18.5C25 18.9596 24.9095 19.4148 24.7336 19.8394C24.5577 20.264 24.2999 20.6499 23.9749 20.9749C23.6499 21.2999 23.264 21.5577 22.8394 21.7336C22.4148 21.9095 21.9596 22 21.5 22C21.0404 22 20.5852 21.9095 20.1606 21.7336C19.736 21.5577 19.3501 21.2999 19.0251 20.9749C18.7001 20.6499 18.4423 20.264 18.2664 19.8394C18.0905 19.4148 18 18.9596 18 18.5Z" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11 25.5C11 24.5717 11.3687 23.6815 12.0251 23.0251C12.6815 22.3687 13.5717 22 14.5 22H18V25.5C18 26.4283 17.6313 27.3185 16.9749 27.9749C16.3185 28.6313 15.4283 29 14.5 29C13.5717 29 12.6815 28.6313 12.0251 27.9749C11.3687 27.3185 11 26.4283 11 25.5Z" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11 18.5C11 17.5717 11.3687 16.6815 12.0251 16.0251C12.6815 15.3687 13.5717 15 14.5 15H18V22H14.5C13.5717 22 12.6815 21.6313 12.0251 20.9749C11.3687 20.3185 11 19.4283 11 18.5Z" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <!-- Hero Image -->
+                <img src="./images/author-image.jpg" class="hero-image" alt="hero-image"/>
+
+                <!-- Hero Image Shadow -->
+                <svg width="280" height="320" viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="280" height="320" fill="#E5E7EB"/>
+                </svg>              
+            </div>
+        </div>
+    </section>
+
+    <!--====================================================
+    ---- About Section
+    =====================================================-->
+
+    <section class="about-section">
+        <div class="container">
+            <!-- Section Badge -->
+            <p class="badge">
+                About Me
+            </p>
+
+            <!-- About Contents -->
+            <div class="contents">
+
+                <div class="left">
+                    <!-- About Image -->
+                    <img src="./images/author-image-2.jpg" class="about-image" alt="about-image"/>
+
+                    <!-- About Image Shadow -->
+                    <svg width="400" height="480" viewBox="0 0 400 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="400" height="480" fill="#E5E7EB"/>
+                    </svg>
+                </div>
+
+                <div class="mobile-hero-image">
+                    <!-- Hero Image -->
+                    <img src="./images/author-image-2.jpg" class="about-mobile-image" alt="about-image"/>
+
+                    <!-- Hero Image Shadow -->
+                    <svg width="280" height="320" viewBox="0 0 280 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="280" height="320" fill="#E5E7EB"/>
+                    </svg>
+                </div>
+
+                <div class="right">
+                    <h2>Curious about me? Here you have it:</h2>
+
+                    <p>
+                        I am passionate about coding, solving problems, and building innovative projects. With a love 
+                        for continuous learning and exploration, I enjoy reading books and engaging in various exciting 
+                        activities. I believe that knowledge has no limits, and constantly seeking opportunities to 
+                        expand my skills and contribute to meaningful projects.
+                    </p>
+
+                    <p>
+                        I'm a passionate, self-proclaimed designer who specializes in full stack development 
+                        (React.js & Node.js). I am very enthusiastic about bringing the technical and visual aspects 
+                        of digital products to life. User experience, pixel perfect design, and writing clear, readable, 
+                        highly performant code matters to me.
+                    </p>
+
+                    <p>
+                        I am very much a progressive thinker and enjoy working on products end to end, from ideation 
+                        all the way to development.
+                    </p>
+
+                    <p>
+                        When I'm not in full-on developer mode, you can find me hovering around on twitter or on indie 
+                        hacker, witnessing the journey of early startups or enjoying some free time. You can follow me 
+                        on Twitter where I share tech-related bites and build in public, or you can follow me on 
+                        <a href="https://github.com/ashfaquehossainabir" target="_blank" class="text-link">GitHub</a>.
+                    </p>
+
+                    <p>Age: <span id="age"></span> Years</p>
+
+                    <p>
+                        Country: 
+
+                        <!-- Bangladesh Flag SVG -->
+                        <svg style="display: inline-block" xmlns="http://www.w3.org/2000/svg" width="16pt" height="10pt" viewBox="0 0 16 10">
+                          <g id="surface1">
+                            <rect x="0" y="0" width="16" height="10" style="fill: rgb(0%, 41.568627%, 30.588235%);fill-opacity: 1;stroke: none;"></rect>
+                            <path style="stroke: none;fill-rule: nonzero;fill: rgb(95.686275%,16.470588%,25.490196%);fill-opacity: 1;" d="M 10.398438 5 C 10.398438 6.839844 8.96875 8.332031 7.199219 8.332031 C 5.433594 8.332031 4 6.839844 4 5 C 4 3.160156 5.433594 1.667969 7.199219 1.667969 C 8.96875 1.667969 10.398438 3.160156 10.398438 5 Z M 10.398438 5 "></path>
+                          </g>
+                        </svg> 
+
+                        Bangladesh
+                    </p>
+                    
+                    <p>
+                        Freelance: <span class="active-status"></span> <span class="availability-status"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====================================================
+    ---- Skills Section
+    =====================================================-->
+
+    <section class="skill-section">
+        <div class="container">
+            <!-- Section Badge -->
+            <p class="badge">
+                Skills
+            </p>
+
+            <!-- Section Subtitle -->
+            <p class="subtitle">
+                The skills, tools and technologies I am really good at:
+            </p>
+
+            <!-- Skill Icons Container -->
+            <div class="skill-icons">
+
+                <!-- Javascript Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-javscript.svg" alt="javascript-icon"/>
+                    <p>Javascript</p>
+                </div>
+
+                <!-- Typescript Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-typescript.svg" alt="typescript-icon"/>
+                    <p>Typescript</p>
+                </div>
+
+                <!-- React Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-react.svg" alt="react-icon"/>
+                    <p>React</p>
+                </div>
+
+                <!-- Next.js Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-nextjs.svg" alt="nextjs-icon"/>
+                    <p>Next.js</p>
+                </div>
+
+                <!-- Node.js Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-nodejs.svg" alt="nodejs-icon"/>
+                    <p>Node.js</p>
+                </div>
+
+                <!-- Express.js Icon -->
+                <div class="skill-icon express">
+
+                    <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_316_300)">
+                            <path d="M64.1877 49.59C61.8597 50.182 60.4197 49.616 59.1277 47.676L49.9397 34.964L48.6117 33.204L37.8817 47.718C36.6557 49.464 35.3697 50.224 33.0817 49.606L46.8217 31.162L34.0297 14.502C36.2297 14.074 37.7497 14.292 39.0997 16.262L48.6297 29.132L58.2297 16.332C59.4597 14.586 60.7817 13.922 62.9897 14.566L58.0297 21.142L51.3097 29.892C50.5097 30.892 50.6197 31.576 51.3557 32.542L64.1877 49.59ZM0.203744 30.854L1.32774 25.326C4.38774 14.386 16.9277 9.84002 25.5757 16.6C30.6297 20.576 31.8857 26.2 31.6357 32.5H3.14774C2.71974 43.84 10.8817 50.684 21.2877 47.192C24.9377 45.966 27.0877 43.108 28.1637 39.532C28.7097 37.74 29.6137 37.46 31.2977 37.972C30.4377 42.444 28.4977 46.18 24.3977 48.518C18.2717 52.018 9.52774 50.886 4.92774 46.022C2.18774 43.2 1.05574 39.624 0.547744 35.8C0.467744 35.168 0.307744 34.566 0.187744 33.96C0.198411 32.9254 0.203744 31.8907 0.203744 30.856V30.854ZM3.19974 30.094H28.9437C28.7757 21.894 23.6697 16.07 16.6917 16.02C9.03174 15.96 3.53174 21.646 3.19974 30.094Z" fill="black"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_316_300">
+                                <rect width="64" height="64" fill="white" transform="translate(0.187744)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    <p>Express.js</p>
+                </div>
+
+                <!-- Nest.js Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-nest.svg" alt="nestjs-icon"/>
+                    <p>Nest.js</p>
+                </div>
+
+                <!-- Socket.io Icon -->
+                <div class="skill-icon socket">
+                    
+                    <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_316_308)">
+                            <path d="M64.4879 31.295C64.3139 20.595 58.3479 10.177 49.1179 4.69099C41.8459 0.161987 32.6599 -1.05701 24.3859 1.03299C11.9329 4.16799 2.00488 15.446 0.742881 28.3C-0.825119 40.44 5.31488 53.066 15.8079 59.292C26.0839 65.736 40.0609 65.475 50.1079 58.692C59.1649 52.814 64.7819 42.092 64.4779 31.304L64.4879 31.295ZM34.2699 59.25C19.7269 60.687 5.66288 48.365 5.26988 33.778C4.16988 21.935 11.9749 10.222 23.1219 6.30299C38.7539 0.0329871 57.9559 11.615 59.5669 28.38C62.0929 43.444 49.5529 58.78 34.2699 59.25ZM24.6999 30.38L45.7299 13.18L34.3659 30.423C31.1439 30.423 27.9219 30.424 24.6999 30.38ZM30.6129 33.56L40.2789 33.604L19.2489 50.847L30.6129 33.56Z" fill="#010101"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_316_308">
+                                <rect width="64" height="64" fill="white" transform="translate(0.5)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    <p>Socket.io</p>
+                </div>
+
+                <!-- PostgreSQL Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-postgresql.svg" alt="postgreSQL-icon"/>
+                    <p>PostgreSQL</p>
+                </div>
+
+                <!-- MongoDB Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-mongodb.svg" alt="MongoDB-icon"/>
+                    <p>MongoDB</p>
+                </div>
+
+                <!-- Sass/Scss Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-sass.svg" alt="sass-icon"/>
+                    <p>Sass/Scss</p>
+                </div>
+
+                <!-- Tailwind CSS Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-tailwindcss.svg" alt="tailwind-icon"/>
+                    <p>Tailwind CSS</p>
+                </div>
+
+                <!-- Figma Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-figma.svg" alt="figma-icon"/>
+                    <p>Figma</p>
+                </div>
+
+                <!-- Cypress Icon -->
+                <div class="skill-icon cypress">
+                    
+                    <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_316_340)">
+                            <path d="M1.48928 40.4784C0.734741 37.7306 0.350586 34.8764 0.350586 32.0018C0.350586 18.879 8.59227 6.88003 20.8605 2.14832L22.469 6.31128C11.9088 10.3852 4.81612 20.7086 4.81612 32.0018C4.81612 34.479 5.14536 36.9322 5.79359 39.2963L1.48928 40.4784Z" fill="#58D09E"/>
+                            <path d="M20.6461 2.2505C23.3 1.21286 26.0984 0.532471 28.9573 0.231986C42.0082 -1.13972 54.8029 5.80258 60.7911 17.509L56.8191 19.5438C51.6637 9.46734 40.6554 3.4926 29.4241 4.67306C26.9604 4.93199 24.5551 5.51586 22.2717 6.40766L20.6461 2.2505Z" fill="#58D09E"/>
+                            <path d="M46.9978 55.2685C55.7122 49.7137 60.566 39.8557 59.6642 29.5475C59.3446 25.895 58.3309 22.4066 56.6562 19.1861L60.6132 17.1219C62.5607 20.866 63.7404 24.9148 64.1117 29.1584C65.1594 41.1339 59.5229 52.5821 49.3979 59.0351L46.9978 55.2685Z" fill="black"/>
+                            <path d="M22.8532 25.3992C25.4425 25.3992 27.5518 26.78 28.6357 29.1887L28.7214 29.3772L33.0702 27.9004L32.9777 27.6778C31.2937 23.5764 27.4146 21.0272 22.8532 21.0272C19.6462 21.0272 17.0397 22.0552 14.8858 24.1658C12.7456 26.2627 11.6619 28.901 11.6619 32.0086C11.6619 35.0888 12.7456 37.7134 14.8858 39.8103C17.0397 41.921 19.6462 42.9488 22.8532 42.9488C27.4146 42.9488 31.2937 40.3996 32.9777 36.3018L33.0702 36.0791L28.7145 34.5988L28.6322 34.7942C27.6616 37.1618 25.5009 38.5768 22.8532 38.5768C21.049 38.5768 19.5262 37.9464 18.3189 36.706C17.098 35.4486 16.4806 33.8691 16.4806 32.012C16.4806 30.1412 17.0842 28.5926 18.3189 27.2768C19.5228 26.0298 21.049 25.3992 22.8532 25.3992Z" fill="black"/>
+                            <path d="M50.0921 21.4316L43.8946 37.1138L37.656 21.4316H32.5525L41.3017 42.8358L35.0768 57.932L39.5389 58.8195L54.9144 21.4316H50.0921Z" fill="black"/>
+                            <path d="M35.8751 55.9858L34.7879 58.6173C34.5718 59.1381 34.0779 59.4909 33.5223 59.5149C33.1554 59.5286 32.785 59.5389 32.4111 59.5389C19.6147 59.5321 8.29316 50.5106 5.48763 38.08L1.13184 39.0633C2.70609 46.0358 6.65717 52.3642 12.2579 56.887C17.9239 61.461 25.0611 63.9862 32.3631 64C32.3734 64 32.4282 64 32.4282 64C32.857 64 33.2822 63.9897 33.7075 63.9726C35.9986 63.8766 38.0462 62.441 38.9207 60.3133L40.3406 56.8733L35.8751 55.9858Z" fill="black"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_316_340">
+                                <rect width="64" height="64" fill="white" transform="translate(0.350586)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    <p>Cypress</p>
+                </div>
+
+                <!-- Storybook Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-storybook.svg" alt="storybook-icon"/>
+                    <p>Storybook</p>
+                </div>
+
+                <!-- Git Icon -->
+                <div class="skill-icon">
+                    <img src="./images/skill-icons/icon-git.svg" alt="git-icon"/>
+                    <p>Git</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Typed JS -->
+    <script src="js/typed.min.js"></script>
+
+    <!-- JS Source -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
