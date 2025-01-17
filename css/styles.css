@@ -112,6 +112,10 @@ button {
 
     --about-shadow-stroke: #F9FAFB;
 
+    --service-box-color: #0E2431;
+    --service-headline-color: #F9FAFB;
+    --service-font-color: #ffffff;
+
     --nav-menu-border: #F3F4F6;
 
     --badge-color: #E5E7EB;
@@ -138,6 +142,10 @@ button {
     --hero-shadow-stroke: #030712;
 
     --about-shadow-stroke: #111827;
+
+    --service-box-color: #303952;
+    --service-headline-color: #F9FAFB;
+    --service-font-color: #D1D5DB;
 
     --nav-menu-border: #1F2937;
 
@@ -849,6 +857,71 @@ section.skill-section .skill-icons .skill-icon svg {
 }
 
 
+/*================================================= 
+-- Services Section
+=================================================*/
+
+section.services-section {
+    padding: 100px 0;
+    transition: var(--trans-fast);
+    background: var(--background-secondary);
+}
+
+section.services-section .container {
+    max-width: 1200px;
+}
+
+section.services-section .service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+    row-gap: 48px;
+    margin-top: 48px;
+}
+
+section.services-section .service-boxes .service-box {
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: 20px;
+    background: var(--service-box-color);
+}
+
+section.services-section .service-boxes .service-box:hover svg path {
+    fill: var(--accent);
+    transition: var(--trans-fast);
+}
+
+section.services-section .service-boxes .service-box:hover h2 {
+    cursor: pointer;
+    color: var(--accent);
+}
+
+section.services-section .service-boxes .service-box svg {
+    width: 50px;
+    height: 50px;
+}
+
+section.services-section .service-boxes .service-box svg path {
+    /* fill: var(--font-secondary); */
+    fill: var(--service-font-color);
+    transition: var(--trans-fast);
+}
+
+section.services-section .service-boxes .service-box h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* color: var(--font-primary); */
+    transition: var(--trans-fast);
+    color: var(--service-headline-color);
+}
+
+section.services-section .service-boxes .service-box p {
+    /* color: var(--font-secondary); */
+    transition: var(--trans-fast);
+    color: var(--service-font-color);
+}
+
+
 
 
 
@@ -861,9 +934,145 @@ section.skill-section .skill-icons .skill-icon svg {
 =================================================*/
 
 
+/* ==========| 999px Screen |=========== */
+
+@media screen and (max-width: 999px) {
+    /* ------------------------------------------
+    --- Skill Section
+    ------------------------------------------ */
+
+    section.skill-section .skill-icons {
+        grid-template-columns: repeat(6, 1fr);
+        row-gap: 24px;
+    }
+
+
+    /* ------------------------------------------
+    --- Services Section
+    ------------------------------------------ */
+
+    section.services-section .service-boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ==========| 950px Screen |=========== */
+
+@media screen and (max-width: 950px) {
+    /* ------------------------------------------
+    --- Hero Section
+    ------------------------------------------ */
+
+    section.hero-section {
+        height: auto;
+    }
+
+    section.hero-section .container {
+        position: relative;
+        grid-template-columns: 1fr;
+        padding-top: 140px;
+    }
+
+    section.hero-section .left .hero-contents {
+        padding-top: 350px;
+    }
+
+    section.hero-section .left .mobile-hero-image {
+        display: block;
+    }
+
+    section.hero-section .left .mobile-hero-image img {
+        position: absolute;
+        left: 50%;
+        width: 240px;
+        height: 280px;
+        margin: 0 auto;
+        object-fit: cover;
+        border: 8px solid var(--hero-shadow-stroke);
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    section.hero-section .left .mobile-hero-image svg {
+        position: absolute;
+        left: 50%;
+        /* top: 15%; */
+        width: 280px;
+        height: 280px;
+        margin-top: 30px;
+        transform: translateX(-50%);
+        /* z-index: -1; */
+    }
+
+    section.hero-section .right {
+        display: none;
+    }
+
+    .dark-theme .hero-section .left svg rect {
+        fill: #374151;
+        transition: var(--trans-fast);
+    }
+
+
+    /* ------------------------------------------
+    --- About Section
+    ------------------------------------------ */
+
+    section.about-section .container .contents {
+        grid-template-columns: 1fr;
+    }
+
+    section.about-section .container .contents .left {
+        display: none;
+    }
+
+    section.about-section .container {
+        position: relative;
+    }
+
+    section.about-section .container .contents .right {
+        padding-top: 450px;
+    }
+
+    section.about-section .container .contents .mobile-hero-image {
+        display: block;
+    }
+
+    section.about-section .container .contents .mobile-hero-image img {
+        position: absolute;
+        left: 50%;
+        width: 280px;
+        height: 360px;
+        margin: 0 auto;
+        object-fit: cover;
+        border: 8px solid var(--hero-shadow-stroke);
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    section.about-section .container .contents .mobile-hero-image svg {
+        position: absolute;
+        left: 50%;
+        /* top: 15%; */
+        width: 320px;
+        height: 360px;
+        margin-top: 30px;
+        transform: translateX(-50%);
+        /* z-index: -1; */
+    }
+
+    .dark-theme section.about-section .container .contents .mobile-hero-image svg rect {
+        fill: #374151;
+        transition: var(--trans-fast);
+    }
+}
+
+
 /* ==========| 780px Screen |=========== */
 
 @media screen and (max-width: 780px) {
+    
     /* ------------------------------------------
     --- Header Section
     ------------------------------------------ */
@@ -1055,19 +1264,48 @@ section.skill-section .skill-icons .skill-icon svg {
         transition: var(--trans-fast);
     }
 
+
+    /* ------------------------------------------
+    --- Skill Section
+    ------------------------------------------ */
+
     section.skill-section .skill-icons {
         grid-template-columns: repeat(4, 1fr);
         row-gap: 24px;
     }
+
+
+    /* ------------------------------------------
+    --- Services Section
+    ------------------------------------------ */
+
+    section.services-section .service-boxes {
+        grid-template-columns: 1fr;
+    }
 }
+
+
+/* ==========| 575px Screen |=========== */
 
 @media screen and (max-width: 575px) {
     section.skill-section .skill-icons {
         grid-template-columns: repeat(3, 1fr);
-        row-gap: 16px;
+        row-gap: 48px;
     }
 }
 
+
+/* ==========| 480px Screen |=========== */
+
+@media screen and (max-width: 480px) {
+    section.skill-section .skill-icons {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 48px;
+    }
+}
+
+
+/* ==========| 350px Screen |=========== */
 
 @media screen and (max-width: 350px) {
     section.about-section .container .contents .mobile-hero-image img {
