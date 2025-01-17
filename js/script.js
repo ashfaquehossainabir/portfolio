@@ -82,3 +82,18 @@ availabilityText.innerHTML = "Not Available";
 
 const age = new Date().getFullYear() - 2000;
 document.getElementById('age').innerHTML = age;
+
+
+// =======================================================
+// -- SCROLL REVEAL ANIMATION
+// =======================================================
+
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2000,
+  delay: 200,
+//     reset: true
+});
+
+sr.reveal('.project-card',{ interval: 200});
