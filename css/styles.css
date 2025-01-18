@@ -248,8 +248,12 @@ button {
 -- Common Style
 =================================================*/
 
+.section-title {
+    display: flex;
+    flex-direction: column;
+}
+
 p.badge {
-    width: 105px;
     margin: 0 auto;
     padding: 4px 20px;
     line-height: 20px;
@@ -1093,6 +1097,16 @@ p.label-content {
 
 .circle-btn:active {
     background-color: hsl(0, 0%, 50%);
+}
+
+
+/*================================================= 
+-- Testimonials Section
+=================================================*/
+
+section.testimonials-section {
+    padding: 100px 0;
+    background: var(--background-primary);
 }
 
 
