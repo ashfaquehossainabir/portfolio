@@ -130,10 +130,10 @@ var swiper = new Swiper(".slide-content", {
       0: {
           slidesPerView: 1,
       },
-      780: {
+      840: {
           slidesPerView: 2,
       },
-      950: {
+      1210: {
           slidesPerView: 3,
       },
   },

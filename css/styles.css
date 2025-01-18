@@ -1656,11 +1656,16 @@ section.testimonials-section {
 
 
     /* ------------------------------------------
-    --- Services Section
+    --- Testimonial Section
     ------------------------------------------ */
 
     .slide-container .slide-content .card-wrapper .review-card {
-        padding: 20px 24px;
+        padding: 35px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
     }
 }
 
@@ -1668,6 +1673,10 @@ section.testimonials-section {
 /* ==========| 575px Screen |=========== */
 
 @media screen and (max-width: 575px) {
+    /* ------------------------------------------
+    --- Skill Section
+    ------------------------------------------ */
+
     section.skill-section .skill-icons {
         grid-template-columns: repeat(3, 1fr);
         row-gap: 48px;
@@ -1678,9 +1687,21 @@ section.testimonials-section {
 /* ==========| 480px Screen |=========== */
 
 @media screen and (max-width: 480px) {
+    /* ------------------------------------------
+    --- Skill Section
+    ------------------------------------------ */
+
     section.skill-section .skill-icons {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 48px;
+    }
+
+    /* ------------------------------------------
+    --- Testimonial Section
+    ------------------------------------------ */
+
+    .slide-container .slide-content .card-wrapper .review-card {
+        padding: 30px;
     }
 }
 
@@ -1689,7 +1710,7 @@ section.testimonials-section {
 
 @media screen and (max-width: 400px) {
     /* ------------------------------------------
-    --- Services Section
+    --- Testimonial Section
     ------------------------------------------ */
 
     .slide-container .slide-content .card-wrapper .review-card {
@@ -1709,6 +1730,10 @@ section.testimonials-section {
 /* ==========| 350px Screen |=========== */
 
 @media screen and (max-width: 350px) {
+    /* ------------------------------------------
+    --- About Section
+    ------------------------------------------ */
+
     section.about-section .container .contents .mobile-hero-image img {
         width: 220px;
     }
