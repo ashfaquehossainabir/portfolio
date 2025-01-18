@@ -96,4 +96,4 @@ const sr = ScrollReveal({
 //     reset: true
 });
 
-sr.reveal('.project-card',{ interval: 200});
+sr.reveal('.project-card, .testimonial-card',{ interval: 200});

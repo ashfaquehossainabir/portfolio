@@ -1106,7 +1106,79 @@ p.label-content {
 
 section.testimonials-section {
     padding: 100px 0;
+    transition: var(--trans-fast);
     background: var(--background-primary);
+}
+
+section.testimonials-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section.testimonials-section .testimonial-cards {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 48px;
+    row-gap: 48px;
+    margin-top: 48px;
+}
+
+section.testimonials-section .testimonial-cards .testimonial-card {
+    /* width: 300px; */
+    margin: 0 auto;
+    padding: 48px;
+    border-radius: 12px;
+    transition: 0.4s ease;
+    background: var(--accent);
+}
+
+section.testimonials-section .testimonial-cards .testimonial-card:hover {
+    background: var(--accent-dark);
+}
+
+section.testimonials-section .testimonial-cards .testimonial-card:hover p {
+    color: #fff;
+}
+
+section.testimonials-section .testimonial-cards .testimonial-card .card-image {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 24px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+section.testimonials-section .testimonial-cards .testimonial-card .card-image img.card-img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+section.testimonials-section .testimonial-cards .testimonial-card h4 {
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.4s ease;
+    color: #040506;
+}
+
+section.testimonials-section .testimonial-cards .testimonial-card:hover h4 {
+    color: #fff;
+}
+
+section.testimonials-section .testimonial-cards .testimonial-card p {
+    max-width: 277px;
+    margin-bottom: 24px;
+    line-height: 24px;
+    transition: 0.4s ease;
+    color: #070709;
+}
+
+section.testimonials-section .testimonial-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 
@@ -1122,9 +1194,19 @@ section.testimonials-section {
 =================================================*/
 
 
+/* ==========| 1040px Screen |=========== */
+
+@media screen and (max-width: 1040px) {
+    section.testimonials-section .testimonial-cards {
+        flex-direction: column;
+    }
+}
+
+
 /* ==========| 999px Screen |=========== */
 
 @media screen and (max-width: 999px) {
+    
     /* ------------------------------------------
     --- Skill Section
     ------------------------------------------ */
