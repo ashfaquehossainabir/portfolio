@@ -2,12 +2,12 @@
 // -- Preloader Functionalities
 // ======================================================
 
-$(window).on("load", function () {
-  "use strict";
+// $(window).on("load", function () {
+//   "use strict";
 
-  // Preloader Fadeout
-  $("#preloader").delay(350).fadeOut("slow");
-});
+//   // Preloader Fadeout
+//   $("#preloader").delay(350).fadeOut("slow");
+// });
 
 
 // =======================================================
