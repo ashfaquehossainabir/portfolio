@@ -96,7 +96,7 @@ const sr = ScrollReveal({
 //     reset: true
 });
 
-sr.reveal('.project-card, .testimonial-card', { interval: 200});
+sr.reveal('.project-card', { interval: 200});
 
 
 // ==========================================================
@@ -138,3 +138,37 @@ var swiper = new Swiper(".slide-content", {
       },
   },
 });
+
+
+// ==========================================================
+// -- Copy Button Functionality
+// ==========================================================
+
+const emailBtn = $(".email-btn");
+emailBtn.on("click", function () {
+    alert("✓ You successfully copied my email address!");
+    var copiedValue = "ashfaquehossain300@gmail.com";
+    var copiedValueElement = $('<input type=" hidden" id="myhidden">').val(copiedValue).appendTo('body').select()
+    document.execCommand('copy')
+    $('#myhidden').remove();
+});
+
+const cellBtn = $(".cell-btn");
+cellBtn.on("click", function () {
+    alert("✓ You successfully copied my mobile number!");
+    var copiedValue = "+8801577073020";
+    var copiedValueElement = $('<input type=" hidden" id="myhidden">').val(copiedValue).appendTo('body').select()
+    document.execCommand('copy')
+    $('#myhidden').remove();
+});
+
+
+// ==========================================================
+// -- Get Year
+// ==========================================================
+
+const date = new Date();
+const yearText = document.getElementById("year");
+
+let year = date.getFullYear();
+yearText.innerHTML = year;

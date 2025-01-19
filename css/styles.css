@@ -120,6 +120,8 @@ button {
 
     --badge-color: #E5E7EB;
 
+    --contact-font: #111827;
+
     --accent: hsl(229, 76%, 66%);
     --accent-dark: hsl(229, 76%, 56%);
 
@@ -129,6 +131,8 @@ button {
 
     --list-color: #4B5563;
     --list-hover-color: var(--accent);
+
+    --footer-background: hsl(229, 76%, 92%);
 }
 
 .dark-theme {
@@ -151,6 +155,8 @@ button {
 
     --badge-color: #374151;
 
+    --contact-font: #F9FAFB;
+
     --accent: hsl(229, 76%, 66%);
     --accent-dark: hsl(229, 76%, 56%);
 
@@ -160,6 +166,8 @@ button {
 
     --list-color: #D1D5DB;
     --list-hover-color: var(--accent);
+
+    --footer-background: #111827;
 }
 
 
@@ -267,7 +275,8 @@ p.badge {
 }
 
 p.subtitle {
-    margin-top: 16px;
+    max-width: 554px;
+    margin: 16px auto 0;
     line-height: 28px;
     font-size: 20px;
     text-align: center;
@@ -1276,6 +1285,111 @@ section.testimonials-section {
 }
 
 
+/*================================================= 
+-- Contact Section
+=================================================*/
+
+section.contact-section {
+    padding: 96px 0;
+    transition: var(--trans-fast);
+    background: var(--background-primary);
+}
+
+section.contact-section .contact-info {
+    margin-top: 48px;
+}
+
+section.contact-section .contact-info .email-section img,
+section.contact-section .contact-info .email-section .email-btn svg {
+    width: 32px;
+    height: 32px;
+}
+
+section.contact-section .contact-info .cell-section img,
+section.contact-section .contact-info .cell-section .cell-btn svg {
+    width: 32px;
+    height: 32px;
+}
+
+section.contact-section .contact-info .email-section .email-btn svg,
+section.contact-section .contact-info .cell-section .cell-btn svg {
+    cursor: pointer;
+}
+
+section.contact-section .contact-info .email-section .email-btn svg path,
+section.contact-section .contact-info .cell-section .cell-btn svg path {
+    transition: var(--trans-fast);
+}
+
+section.contact-section .contact-info .email-section .email-btn:hover svg path,
+section.contact-section .contact-info .cell-section .cell-btn:hover svg path {
+    stroke: var(--accent-dark);
+}
+
+section.contact-section .contact-info .email-section .email-btn:active svg,
+section.contact-section .contact-info .cell-section .cell-btn:active svg {
+    transform: scale(0.95);
+}
+
+section.contact-section .contact-info .email-section {
+    margin-bottom: 18px;
+}
+
+section.contact-section .contact-info .email-section,
+section.contact-section .contact-info .cell-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.contact-section .contact-info p.mail-text,
+section.contact-section .contact-info p.cell-text {
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 40px;
+    font-size: 36px;
+    transition: var(--trans-fast);
+    color: var(--contact-font);
+}
+
+section.contact-section .social-section {
+    margin-top: 48px;
+    text-align: center;
+}
+
+section.contact-section .social-section p.social-text {
+    margin-bottom: 8px;
+    line-height: 24px;
+    color: var(--font-secondary);
+}
+
+section.contact-section .social-section .contact-icons a svg path {
+    transition: var(--trans-fast);
+}
+
+section.contact-section .social-section .contact-icons a:hover svg path {
+    stroke: var(--accent);
+}
+
+
+/*================================================= 
+-- Footer Section
+=================================================*/
+
+footer {
+    padding: 24px 0;
+    transition: var(--trans-fast);
+    background: var(--footer-background);
+}
+
+footer p.footer-text {
+    text-align: center;
+    color: var(--contact-font);
+}
+
+
+
+
 
 /*===========================================| End |=============================================*/
 
@@ -1667,6 +1781,39 @@ section.testimonials-section {
     .swiper-button-prev {
         display: none;
     }
+
+
+    /* ------------------------------------------
+    --- Contact Section
+    ------------------------------------------ */
+
+    section.contact-section .contact-info p.mail-text,
+    section.contact-section .contact-info p.cell-text {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    section.contact-section .contact-info .email-section img,
+    section.contact-section .contact-info .email-section .email-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    section.contact-section .contact-info .cell-section img,
+    section.contact-section .contact-info .cell-section .cell-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    /* ------------------------------------------
+    --- Footer Section
+    ------------------------------------------ */
+
+    footer p.footer-text {
+        font-size: 14px;
+    }
 }
 
 
@@ -1680,6 +1827,38 @@ section.testimonials-section {
     section.skill-section .skill-icons {
         grid-template-columns: repeat(3, 1fr);
         row-gap: 48px;
+    }
+
+    /* ------------------------------------------
+    --- Contact Section
+    ------------------------------------------ */
+
+    section.contact-section .contact-info p.mail-text,
+    section.contact-section .contact-info p.cell-text {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 16px;
+    }
+
+    section.contact-section .contact-info .email-section img,
+    section.contact-section .contact-info .email-section .email-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    section.contact-section .contact-info .cell-section img,
+    section.contact-section .contact-info .cell-section .cell-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+
+    /* ------------------------------------------
+    --- Footer Section
+    ------------------------------------------ */
+
+    footer p.footer-text {
+        font-size: 12px;
     }
 }
 
