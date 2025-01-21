@@ -741,6 +741,10 @@ section.about-section .container .contents {
     margin-top: 48px;
 }
 
+section.about-section .container .contents .left {
+    height: 525px;
+}
+
 section.about-section .container .contents .left img.about-image {
     position: absolute;
     top: 12%;
@@ -1802,8 +1806,8 @@ footer p.footer-text {
     --- Contact Section
     ------------------------------------------ */
 
-    section.contact-section .contact-info p.mail-text,
-    section.contact-section .contact-info p.cell-text {
+    section.contact-section .contact-info a.mail-text,
+    section.contact-section .contact-info a.cell-text {
         margin-left: 10px;
         margin-right: 10px;
         font-size: 20px;
@@ -1848,8 +1852,8 @@ footer p.footer-text {
     --- Contact Section
     ------------------------------------------ */
 
-    section.contact-section .contact-info p.mail-text,
-    section.contact-section .contact-info p.cell-text {
+    section.contact-section .contact-info a.mail-text,
+    section.contact-section .contact-info a.cell-text {
         margin-left: 5px;
         margin-right: 5px;
         font-size: 16px;
