@@ -27,6 +27,12 @@ html {
 
     --white: #fff;
 
+    --hero-active-status-green: #10b77f;
+    --hero-active-status-green-after: hsla(160, 84%, 39%, 0.5);
+
+    --hero-active-status-red: #ff1a1a;
+    --hero-active-status-red-after: hsla(0, 100%, 55%, 0.5);
+
     --active-status-green: #00df6f;
     --active-status-red: #FF0000;
 
@@ -675,7 +681,7 @@ section.hero-section .right svg {
 .dot {
     width: 9px;
     height: 9px;
-    background-color: #10B981;
+    background-color: var(--hero-active-status-red);
     border-radius: 50%;
     position: relative;
     left: 8px;
@@ -686,7 +692,7 @@ section.hero-section .right svg {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: hsla(160, 84%, 39%, 0.5);
+    background-color: var(--hero-active-status-red-after);
     position: absolute;
     top: 0;
     left: 0;

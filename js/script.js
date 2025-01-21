@@ -72,6 +72,15 @@ const navToggleFunc = () => {
 
 
 // =======================================================
+// -- Hero Section Availability Status
+// =======================================================
+
+const heroAvailabilityText = document.getElementById("availability-status");
+
+heroAvailabilityText.innerHTML = "Not available for new projects";
+
+
+// =======================================================
 // -- About Section Availability Status
 // =======================================================
 
