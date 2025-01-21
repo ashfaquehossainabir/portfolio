@@ -1352,14 +1352,19 @@ section.contact-section .contact-info .cell-section {
     align-items: center;
 }
 
-section.contact-section .contact-info p.mail-text,
-section.contact-section .contact-info p.cell-text {
+section.contact-section .contact-info a.mail-text,
+section.contact-section .contact-info a.cell-text {
     margin-left: 20px;
     margin-right: 20px;
     line-height: 40px;
     font-size: 36px;
     transition: var(--trans-fast);
     color: var(--contact-font);
+}
+
+section.contact-section .contact-info a.mail-text:hover,
+section.contact-section .contact-info a.cell-text:hover {
+    color: var(--accent-dark);
 }
 
 section.contact-section .social-section {
