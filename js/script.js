@@ -38,16 +38,10 @@ window.onscroll = function() {
 const themeBtn = document.querySelectorAll(".theme-btn");
 
 for(let i = 0; i < themeBtn.length; i++) {
-  const currentMode = localStorage.getItem('mode') || 'light-theme';
-  document.body.classList.add(currentMode);
-
-  themeBtn[i].addEventListener('click', () => {
-    document.body.classList.toggle('light-theme');
-    document.body.classList.toggle('dark-theme');
-
-    const newMode = document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
-    localStorage.setItem('mode', newMode);
-  })
+    themeBtn[i].addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      document.body.classList.toggle('dark-theme');
+    })
 }
 
 
