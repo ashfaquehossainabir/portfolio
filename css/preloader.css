@@ -270,7 +270,7 @@
 }
 
 #preloader {
-  background: var(--background-primary);
+  background: #f9f9ff;
   height: 100%;
   position: fixed;
   width: 100%;
