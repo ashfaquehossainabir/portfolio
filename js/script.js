@@ -103,15 +103,35 @@ document.getElementById('age').innerHTML = age;
 // -- SCROLL REVEAL ANIMATION
 // =======================================================
 
-const sr = ScrollReveal({
-  origin: 'top',
-  distance: '60px',
-  duration: 2000,
-  delay: 200,
-//     reset: true
-});
+// const sr = ScrollReveal({
+//   origin: 'top',
+//   distance: '60px',
+//   duration: 2000,
+//   delay: 200,
+// //     reset: true
+// });
 
-sr.reveal('.project-card', { interval: 200});
+// sr.reveal('.project-card', { interval: 200});
+
+
+
+// =======================================================
+// -- Wow JS
+// =======================================================
+
+$(window).on("load", function () {
+  /*=========================================================================
+    Wow Initialize
+  =========================================================================*/
+  // Here will be the WoW Js implementation.
+  setTimeout(function () {
+    new WOW().init();
+  }, 0);
+
+  var dynamicDelay = [200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000];
+  var fallbackValue = "200ms";
+
+})
 
 
 // ==========================================================
