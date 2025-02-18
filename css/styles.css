@@ -1272,7 +1272,7 @@ section.testimonials-section {
 
 .slide-container .slide-content .card-wrapper .review-card .review-details .card-description p {
     line-height: 26px;
-    font-size: 16px;
+    font-size: 14px;
     color: #7B7B7B;
 }
 
@@ -1920,7 +1920,7 @@ footer p.footer-text {
     }
 
     .slide-container .slide-content .card-wrapper .review-card .review-details .card-description p {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -1938,5 +1938,19 @@ footer p.footer-text {
 
     section.about-section .container .contents .mobile-hero-image svg {
         width: 240px;
+    }
+
+
+    /* ------------------------------------------
+    --- Testimonial Section
+    ------------------------------------------ */
+
+    .slide-container .slide-content .card-wrapper .review-card .review-details {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .slide-container .slide-content .card-wrapper .review-card .stars-icon {
+        display: none;
     }
 }
