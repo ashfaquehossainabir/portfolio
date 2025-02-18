@@ -1801,6 +1801,33 @@ footer p.footer-text {
         display: none;
     }
 
+    .slide-container .slide-content .card-wrapper .review-card {
+        text-align: center;
+    }
+
+    .slide-container .slide-content .card-wrapper .review-card :is(img, p) {
+        margin: 0 auto;
+    }
+
+    .slide-container .slide-content .card-wrapper .review-card img {
+        margin-bottom: 20px;
+    }
+
+    .slide-container .slide-content .card-wrapper .review-card .stars-icon {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .slide-container .slide-content .card-wrapper .review-card .review-details {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .slide-container .slide-content .card-wrapper .review-card .review-details .card-image {
+        display: block;
+        margin: 0 auto 10px;
+    }
+
 
     /* ------------------------------------------
     --- Contact Section
@@ -1952,5 +1979,9 @@ footer p.footer-text {
 
     .slide-container .slide-content .card-wrapper .review-card .stars-icon {
         display: none;
+    }
+
+    .slide-container .slide-content .card-wrapper .review-card .review-details .card-image {
+        margin-top: 20px;
     }
 }
