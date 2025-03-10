@@ -1668,7 +1668,7 @@ footer p.footer-text {
     }
 
     section.hero-section .left .hero-contents {
-        padding-top: 350px;
+        padding-top: 300px;
     }
 
     section.hero-section .left .mobile-hero-image {
@@ -1678,6 +1678,7 @@ footer p.footer-text {
     section.hero-section .left .mobile-hero-image img {
         position: absolute;
         left: 50%;
+        top: 10%;
         width: 240px;
         height: 280px;
         margin: 0 auto;
@@ -1690,9 +1691,9 @@ footer p.footer-text {
     section.hero-section .left .mobile-hero-image svg {
         position: absolute;
         left: 50%;
-        /* top: 15%; */
+        top: 8%;
         width: 280px;
-        height: 280px;
+        height: 290px;
         margin-top: 30px;
         transform: translateX(-50%);
         /* z-index: -1; */
