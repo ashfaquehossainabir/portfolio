@@ -21,9 +21,10 @@ $(window).on("load", function () {
 // =======================================================
 
 const navbar = document.querySelector("header");
+var deviceMedia = window.matchMedia("(min-width: 781px)");
 
 window.onscroll = function() {
-  if(document.documentElement.scrollTop > 20) {
+  if(deviceMedia.matches && document.documentElement.scrollTop > 20) {
     navbar.style.padding = "10px 0";
   } else {
     navbar.style.padding = "20px 0";
