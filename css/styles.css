@@ -364,6 +364,12 @@ header nav img.logo-dark {
 
 /* Brand Logo Animation */
 
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
 header nav h1.brand-logo {
     font-size: 28px;
     font-weight: 900;
@@ -520,7 +526,7 @@ section.hero-section .container {
     display: grid;
     grid-template-columns: 5fr 2fr;
     gap: 48px;
-    padding: 180px 25px 96px;
+    padding: 140px 25px 96px;
 }
 
 section.hero-section .hero-contents h1 {
@@ -532,6 +538,11 @@ section.hero-section .hero-contents h1 {
     letter-spacing: -2%;
     transition: var(--trans-fast);
     color: var(--font-primary);
+}
+
+section.hero-section .left .hero-contents p.position-desc {
+    margin-top: 15px;
+    font-size: 24px;
 }
 
 section.hero-section .hero-contents p {
@@ -626,7 +637,7 @@ section.hero-section .right {
 
 section.hero-section .right img.hero-image {
     position: absolute;
-    top: 30%;
+    top: 25%;
     right: 5%;
     width: 280px;
     height: 320px;
@@ -638,7 +649,7 @@ section.hero-section .right img.hero-image {
 
 section.hero-section .right svg {
     position: absolute;
-    top: 36%;
+    top: 31%;
     right: 2%;
     border: 8px solid var(--hero-shadow-stroke);
     transition: var(--trans-fast);
