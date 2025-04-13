@@ -372,9 +372,7 @@ header nav h1.brand-logo {
 }
 
 header nav h1.gradient-text {
-    /* font-size: 24px;
-    font-weight: bold; */
-    background: linear-gradient(270deg, #ff00cc, #6666ff, #00ffcc, #ffcc00, var(--accent), var(--logo-color));
+    background: linear-gradient(270deg, #ff00cc, #6666ff, #53c685, #ba1aff, var(--accent), var(--logo-color));
     background-size: 1000% 1000%;
     background-clip: text;
     -webkit-background-clip: text;
