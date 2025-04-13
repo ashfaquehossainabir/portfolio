@@ -150,6 +150,8 @@ button {
     --list-hover-color: var(--accent);
 
     --footer-background: hsl(229, 76%, 92%);
+
+    --logo-color: #111827;
 }
 
 .dark-theme {
@@ -185,6 +187,8 @@ button {
     --list-hover-color: var(--accent);
 
     --footer-background: #111827;
+
+    --logo-color: #F9FAFB;
 }
 
 
@@ -356,6 +360,42 @@ header nav img.logo-dark {
 .dark-theme header nav img.logo-dark {
     display: block;
 }
+
+
+/* Brand Logo Animation */
+
+header nav h1.brand-logo {
+    font-size: 28px;
+    font-weight: 900;
+    transition: var(--trans-fast);
+    color: var(--logo-color);
+}
+
+header nav h1.gradient-text {
+    /* font-size: 24px;
+    font-weight: bold; */
+    background: linear-gradient(270deg, #ff00cc, #6666ff, #00ffcc, #ffcc00, var(--accent), var(--logo-color));
+    background-size: 1000% 1000%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* animation-delay: 5s; */
+}
+
+header nav h1.gradient-text.animate {
+    animation: gradientMove 5s ease;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 100%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Header Nav Lists Section*/
 
 header nav ul li a {
     color: var(--list-color);

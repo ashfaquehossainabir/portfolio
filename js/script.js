@@ -16,6 +16,22 @@ $(window).on("load", function () {
 }});
 
 
+// ==========================================================
+// -- Logo Text Animation
+// ==========================================================
+
+const text = document.querySelector(".brand-logo")
+
+setInterval(() => {
+  text.classList.add('animate');
+
+  // Remove class after animation ends (to reset)
+  setTimeout(() => {
+    text.classList.remove('animate');
+  }, 5000); // matches animation duration
+}, 15000); // repeat every 10 seconds
+
+
 // =======================================================
 // -- Shrink Navbar Functionality
 // =======================================================
