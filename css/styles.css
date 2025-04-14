@@ -543,6 +543,7 @@ section.hero-section .hero-contents h1 {
 section.hero-section .left .hero-contents p.position-desc {
     margin-top: 15px;
     font-size: 24px;
+    font-weight: 500;
 }
 
 section.hero-section .hero-contents p {
@@ -1773,7 +1774,6 @@ footer p.footer-text {
     }
 
     section.hero-section .left .hero-contents p.position-desc {
-        margin-top: 10px;
         font-size: 18px;
     }
 
