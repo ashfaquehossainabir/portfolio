@@ -1773,6 +1773,7 @@ footer p.footer-text {
     }
 
     section.hero-section .left .hero-contents p.position-desc {
+        margin-top: 10px;
         font-size: 18px;
     }
 
